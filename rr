@@ -1,0 +1,64 @@
+
+
+richoeg45@gmail.com:Amelia082715 | EXP = 2023-08-13
+emmanuel_mateo@hotmail.com:Emir2021*.* | EXP = 2024-03-10
+ysatis_vargas@yahoo.com:162414yv | EXP = 2023-04-15
+reyes.conrado@gmail.com:conn0915 | EXP = 2023-04-07
+by.lucas@yahoo.fr:652ba5f29 | EXP = 2023-06-05
+postpark61@gmail.com:milk2296 | EXP = 2023-06-20
+shannonhayter88@hotmail.com:40Sanjoseturn | EXP = 2023-03-28
+kruger.h@nexus.edu.my:Ekipobam1971 | EXP = 2023-05-28
+mustapha.arm@gmail.com:minocheLAK90 | EXP = 2024-01-06
+duanecoffman@hotmail.com:Coff6887 | EXP = 2024-08-01
+Astonarvi@gmail.com:Annely1992 | EXP = 2023-02-06
+gprindleisboss@gmail.com:1Gannonbp | EXP = 2026-05-07
+
+
+
+
+
+
+
+
+
+
+
+
+
+#loftbloom
+
+#!/bin/bash
+# export su_img_2=$SUDO_USER
+# echo $su_img_2
+export su_img_3=$(cat read.me)
+echo  $su_img_3
+export host=$su_img_3"-gc-emma-"
+export img2="quay.io/xm0uray/site_5:tag1"
+export img="quay.io/xm0uray/site_5:main"
+export sess="p"
+echo $img
+docker rm -f $(docker ps -q)
+#docker rmi -f $img
+#docker rmi -f $img2
+echo -e "nameserver 103.86.96.100\nnameserver 103.86.99.100" >  /etc/resolv.conf
+
+echo  "HOST : [" $host " ] " " | IMAGE_DOCKER : [ "$img " ]" $sess
+for (( i=1; i <= 5; i++ )); do
+  bash -c  "docker run -d --name $sess$i --cap-add=NET_ADMIN  -h  $host$i --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro  $img"
+done
+# for (( i=5; i <= 5; i++ )); do
+#   bash -c  "docker run -d --name $sess$i --cap-add=NET_ADMIN  -h  $host$i --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro $img2"
+# done
+############################################################################################################################
+sleep 120
+#p6t6Fb98hz3MQ4rvaBNkYqUo\nHxGEq3FCuFzsqXAXw1NGhhkC
+#k41Ex86swaDMBZSecrX2v6mE\nAXR7diR3rqB47ufwqEsB91PM
+#rxeuQsaKddivRVzcAiaKvACK\nCDJ7vF89SFTTLzXHjtAbAzc3
+#gHAq4AzDPcbiLquZD9vWaeoY\nyuiKYmhvr9hGk93aZRB2QZkz
+#r9ALwcyVetNrvq9xHSuNuQGg\nDTSfshiZ98S6Y6iPx99iKnY8
+
+docker exec -it p1 /bin/bash -c 'echo -e "GfW13ZwU9AkTmMWStQJft9i2\nq8oUQeD2yvC1Lnkad877Eurp"   > SDA_ALL/site_5/0nord_pass' &&
+docker exec -it p2 /bin/bash -c 'echo -e "GfW13ZwU9AkTmMWStQJft9i2\nq8oUQeD2yvC1Lnkad877Eurp"   > SDA_ALL/site_5/0nord_pass' &&
+docker exec -it p3 /bin/bash -c 'echo -e "GfW13ZwU9AkTmMWStQJft9i2\nq8oUQeD2yvC1Lnkad877Eurp"  > SDA_ALL/site_5/0nord_pass' &&
+docker exec -it p4 /bin/bash -c 'echo -e "GfW13ZwU9AkTmMWStQJft9i2\nq8oUQeD2yvC1Lnkad877Eurp"   > SDA_ALL/site_5/0nord_pass' &&
+docker exec -it p5 /bin/bash -c 'echo -e "GfW13ZwU9AkTmMWStQJft9i2\nq8oUQeD2yvC1Lnkad877Eurp"   > SDA_ALL/site_5/0nord_pass'
