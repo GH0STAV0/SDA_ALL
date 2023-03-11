@@ -64,6 +64,8 @@ print(g00g_acc)
 # g00g_acc="dahmandargo"
 # g00g_acc="xamiramogdan"
 pofile_path=pwd+"/"+g00g_acc
+cmd_remmove_old_profile="rm -rf "+pofile_path
+os.system(cmd_remmove_old_profile)
 
 ########################################################################################################################################
 
@@ -140,7 +142,7 @@ def extact_gc_profile():
 	mssgg_tel=" [ "+hostname_os +" ] \n [ EXTRACT ] [ "+g00g_acc +" ]"
 	send_msg_dock(mssgg_tel)
 
-extact_gc_profile()
+# extact_gc_profile()
 
 
 print(pofile_path)

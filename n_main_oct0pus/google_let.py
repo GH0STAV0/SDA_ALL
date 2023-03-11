@@ -303,7 +303,7 @@ def starting_tasks():
 	try:
 		stage_1()### CLEAR
 		# mod_vpn2.fnc_vpn ()
-		# cnf_bvb.extact_gc_profile()
+		cnf_bvb.extact_gc_profile()
 		visible_v=cnf_bvb.visible_v
 		display = Display(visible=visible_v, size=(width,height)).start()
 		driver=mod_driver2.build_driver(width ,height)

@@ -1,0 +1,41 @@
+1678532200082	geckodriver	INFO	Listening on 127.0.0.1:31855
+1678532202623	mozrunner::runner	INFO	Running command: "/root/EXTRAT/firefox-97.0.1/firefox/firefox" "--marionette" "--width=1366" "--height=768" "--start-maximized" "--disable-infobars" "--disable-extensions" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "--remote-debugging-port" "9149" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofiley5KZBE"
+1678532204454	Marionette	INFO	Marionette enabled
+1678532204462	Marionette	INFO	Listening on port 18257
+WebDriver BiDi listening on ws://localhost:9149
+Read port: 18257
+1678532205070	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: SessionStore: "The session file is invalid: TypeError: state is null"
+DevTools listening on ws://localhost:9149/devtools/browser/4d367d0b-6246-4a3b-8f48-70025746e3b3
+1678532214619	Marionette	WARN	TimedPromise timed out after 5000 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+GeckoDriver.prototype.maximizeWindow@chrome://remote/content/marionette/driver.js:2497:11
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1678532252006	geckodriver	INFO	Listening on 127.0.0.1:51381
+1678532254651	mozrunner::runner	INFO	Running command: "/root/EXTRAT/firefox-97.0.1/firefox/firefox" "--marionette" "--width=1366" "--height=768" "--start-maximized" "--disable-infobars" "--disable-extensions" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "--remote-debugging-port" "62129" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileKPetNd"
+1678532256886	Marionette	INFO	Marionette enabled
+1678532256894	Marionette	INFO	Listening on port 23281
+WebDriver BiDi listening on ws://localhost:62129
+Read port: 23281
+1678532257429	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1678532433192	geckodriver	INFO	Listening on 127.0.0.1:36357
+1678532436249	mozrunner::runner	INFO	Running command: "/root/EXTRAT/firefox-97.0.1/firefox/firefox" "--marionette" "--width=1366" "--height=768" "--start-maximized" "--disable-infobars" "--disable-extensions" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "--remote-debugging-port" "27821" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileLZIr2J"
+1678532437857	Marionette	INFO	Marionette enabled
+1678532437865	Marionette	INFO	Listening on port 4995
+WebDriver BiDi listening on ws://localhost:27821
+Read port: 4995
+1678532438441	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: SessionStore: "The session file is invalid: TypeError: state is null"
+DevTools listening on ws://localhost:27821/devtools/browser/654d2cdf-c060-401b-b747-49c020c0dd5f
+1678532445535	Marionette	WARN	TimedPromise timed out after 5000 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+GeckoDriver.prototype.maximizeWindow@chrome://remote/content/marionette/driver.js:2497:11
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
