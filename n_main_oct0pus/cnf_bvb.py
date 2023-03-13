@@ -117,7 +117,8 @@ def change_gc_acc():
 			update_and_reset_go_ac(g_a)
 			print("active acoount buckup : "+g_a)
 			print("niiiiiiiiiiiiiiiii")
-			index_of_account=0
+			# index_of_account=0
+			index_of_account=main_ar.index(g_a)
 		else:
 			index_of_account=main_ar.index(g_a)
 
@@ -148,7 +149,7 @@ def change_gc_acc():
 		change_gc_acc()
 
 
-# change_gc_acc()
+change_gc_acc()
 # input("prompt")
 
 def extact_gc_profile():
