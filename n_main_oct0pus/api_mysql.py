@@ -1,10 +1,35 @@
 import para_m
-import requests
+# import requests
 import json ,os
+
+import logging
+import requests
+from requests.adapters import HTTPAdapter, Retry
+# logging.basicConfig(level=logging.DEBUG)
+
 #  ls ~/VPN/N0RD/WORKING_CONFIG | wc -l
 
 api_url=para_m.url
 # print(api_url)
+
+def last_nord_active():
+	try:
+
+		session = requests.Session()
+		retries = Retry(total=5, backoff_factor=1, status_forcelist=[502, 503, 504])
+		session.mount('http://', HTTPAdapter(max_retries=retries))
+
+		response = session.get('https://apiv10.onrender.com/nor/account/last_active/0')
+		data = response.json()
+		data_id = data.get('compt_nord')
+		# print(data_id)
+		return data_id
+
+	except:
+		last_nord_active()
+
+data_id_backup=last_nord_active()
+print(data_id_backup)
 
 
 #/////////////////////  get_config_with_api VVVV ///////////////////////////////////////////
@@ -74,10 +99,22 @@ def reset_van_api():
 
 #//////////////////////////////////////////////////////////////////////////////////////////////
 #////////  Account Active ////////////////////////////////////////////////////////
+def check_online():
+	try:
+		print("tgtg")
+		response = requests.get(f'{api_url}/all')
+		data = response.json()
+		# print(data)
+	except:
+		print("error active")
+		check_online()
 
 def get_active_goo():
+	data_id = "null" 
+	data_name_acc="null"
+	check_online()
 	try:
-		response = requests.get(f'{api_url}/google_account/active')
+		response = requests.get(f'{api_url}/nor/account/active')
 		data = response.json()
 		data_id = data[0].get('acc_numbre')
 		data_name_acc = data[0].get('account_id')
@@ -87,11 +124,13 @@ def get_active_goo():
 		# count_left_count = d3
 		print(data_id,data_name_acc)
 	except:
-		get_active_goo()
-
-
-
+		print("error")
+		#get_active_goo()
+	print(data_id,data_name_acc)
 	return data_id , data_name_acc
+
+
+# get_active_goo()
 
 # count_left_api()
 # get_active_goo()
@@ -165,6 +204,18 @@ def update_and_reset_go_ac(new_set):
 	print("OOOOOOOOOOO")
 
 
+def update_backup_acount(nord_gc_main_account):
+	# van_count_left_api()
+	# print(id_config)
+	# get_config_with_api_van(id_config)
+	d_data = {'id':'0'}
+	response = requests.put(f"{api_url}/nor/update/last/%s" % nord_gc_main_account)
+	# print(response.content)
+	# get_config_with_api_van(id_config)
+	# van_count_left_api()
+# update_conf_van_api(185)
+#/////////////////  update_conf_nord_api ///////////////////////////////////////////////
+
 #/////////////////  update_conf_nord_api ///////////////////////////////////////////////
 def reset_all_google_van_main_account(van_gc_main_account):
 	# van_count_left_api()
@@ -172,6 +223,17 @@ def reset_all_google_van_main_account(van_gc_main_account):
 	# get_config_with_api_van(id_config)
 	d_data = {'id':'1'}
 	response = requests.put(f"{api_url}/google_account/update_van/%s" % van_gc_main_account)
+	# print(response.content)
+	# get_config_with_api_van(id_config)
+	# van_count_left_api()
+# update_conf_van_api(185)
+#/////////////////  update_conf_nord_api ///////////////////////////////////////////////
+def reset_all_google_big_main_account(van_gc_main_account):
+	# van_count_left_api()
+	# print(id_config)
+	# get_config_with_api_van(id_config)
+	d_data = {'id':'1'}
+	response = requests.put(f"{api_url}/nor/account/update/%s" % van_gc_main_account)
 	# print(response.content)
 	# get_config_with_api_van(id_config)
 	# van_count_left_api()

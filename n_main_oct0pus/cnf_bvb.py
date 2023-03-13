@@ -83,28 +83,50 @@ def send_msg_dock(text):
 	print(results.json())
 # send_msg_dock("text")
 # send_msg_dock("text")
+def check_if_update(new_set_van_gc_main_account):
+	print("check again 2")
 ###############################################################################################################################
 def update_and_reset_go_ac(new_set_van_gc_main_account):
 	# print("reset_all_google_van_main_account")
 	print("reset_all_google_van_main_account : ",new_set_van_gc_main_account)
 	# api_mysql.reset_all_google_van_main_account(new_set_van_gc_main_account)
+	api_mysql.reset_all_google_big_main_account(new_set_van_gc_main_account)
+	time.sleep(3)
 	print("update_google_van_main_account: ",new_set_van_gc_main_account)
 	print("set new active")
 	api_mysql.update_google_van_main_account(new_set_van_gc_main_account)
 	time.sleep(2)
 	print("EXIT")
+	api_mysql.update_backup_acount(new_set_van_gc_main_account)
 	# raise SystemExit
 	# sys.exit("Height less than 165")
 
 ########################################################################################################################################
 def change_gc_acc():
 	try:
+		# data_id=0
+		# g_index="null"
 		# g_a=get_actif_account()
 		g_index,g_a=api_mysql.get_active_goo()
-		print(g_a)
+		# g_a="null"
+		print("active acoount : "+g_a)
+
+		# print("active acoount : "+g_a)
+		if g_a == "null":
+			g_a=api_mysql.last_nord_active()
+			update_and_reset_go_ac(g_a)
+			print("active acoount buckup : "+g_a)
+			print("niiiiiiiiiiiiiiiii")
+			index_of_account=0
+		else:
+			index_of_account=main_ar.index(g_a)
+
+		# 	# pass
+			
 		# g_a=read_current_acc_goo()
-		index_of_account=main_ar.index(g_a)
-		print(index_of_account)
+		print("active acoount : "+g_a)
+		
+		print("active ID acoount : "+str(index_of_account))
 		numbr_account=len(main_ar)-1
 		print("number numbr_account ",numbr_account)
 		if index_of_account==numbr_account:
@@ -118,12 +140,15 @@ def change_gc_acc():
 		send_msg_dock(g_a+" --> "+new_set)
 		# print(new_set)
 		update_and_reset_go_ac(new_set)
+		time.sleep(3)
 		print(new_index)
+		# update_and_reset_go_ac(new_set)
+		time.sleep(3)
 	except:
 		change_gc_acc()
 
 
-# change_gc_acc()
+change_gc_acc()
 # input("prompt")
 
 def extact_gc_profile():
@@ -218,7 +243,6 @@ def randomm():
 
 #######################  DISPLAY ##############################
 def resolution_func():
-
 	display_aary=['1366x768']#,'2560x1700','1366x768','2560x1600','2560x1440','1921x1080','2560x1440','1366x768','1440x900','1280x800','2560x1600','1440x900','1680x1050','2880x1800','1920x1200','1080x1920','2160x4096','1366x768','3840x2160','1600x900','1920x1080','2560x1440','1920x1200','2560x1440','2560x1600','1920x1080','1366x768','2560x1440','1366x768','3000x2000','2160x3840','2304x1440','1366x768','1440x900','2560x1600','2880x1800','4096x2304','5120x2880','3840x2160','1920x1080','1280x800','1920x1080','1920x1080','1366x768','1920x1080' ,'1280x720','2560x1440','1080x1920','1080x1920','1440x2560','1440x2560','1440x2560','1080x1920','1440x2560','1440x2560','1440x2560' ,'1080x1920','1080x1920','1080x1920' ,'1080x1920','1440x2560','1440x2560','1440x2560','1080x1920','1440x2560','1080x1920','1280x720','1920x1080','1080x1920','1080x1920' ,'1080x1920','1080x1920','1080x1920' ,'1280x720','1920x1080','1920x1080','1920x1080','1920x1080','1280x720','1280x720','1280x720','1280x720','1920x1080','1920x1080','1920x1080','1920x1080','1920x1080','2560x1440','1920x1080','1920x1080','1920x1080','1920x1080','1280x768','1440x1440','1280x720','1280x720',  '1080x1920', '1080x1920','1440x2560','1280x720','1440x2560','1440x2560','1080x1920','1080x1920','1440x2560','1600x1200','2048x1536','1280x800','1280x800','1024x600','2048x1536' ,'1200x1920','1280x720' ,'1200x1920','1200x1920','1024x600','1024x600','1280x800','1920x1080','1920x1080'  ,'2048x1536','1280x800' ,'1280x800','1280x800','1024x600','1024x600','1280x800','1024x600' ,'1536x2048' ,'1080x1920','1080x1920','1280x800','1280x800','1024x600','1280x800','2048x1536','1920x1200','2560x1600','2560x1600','2048x1536','2048x1536','2732x2048','2048x1536','2048x1536','1280x800','2160x1440','2736x1824','2736x1824','2960x1440','2960x1440','1080x1920','1125x2436','1125x2436','1242x2688','1125x2436','1242x2688','1080x2400','1080x2310','1080x2400','1080x2340','1080x2340','1080x2340','1080x2340','1080x2400','1080x2400','1080x2400','1080x2340','1080x2340','1080x2340','1440x2560','1440x2560','1440x3200','1440x3088','1440x3200','1440x3040','1080x2400','1080x2280','1080x1920','1080x1920','2224x1668','2360x1640','2160x1620','2388x1668','2732x2048','2048x1536','2224x1668','1170x2532','1080x2340','1170x2532','1284x2778']
 	random_display_chose=random.choice(display_aary)
 	display=random_display_chose.split(sep="x")
