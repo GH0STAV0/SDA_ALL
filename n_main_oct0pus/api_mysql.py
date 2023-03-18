@@ -24,7 +24,6 @@ def last_nord_active():
 		data_id = data.get('compt_nord')
 		# print(data_id)
 		return data_id
-
 	except:
 		last_nord_active()
 
