@@ -17,7 +17,7 @@ for (num,item) in enumerate(comp):
 # comp=["vovanvonvowe","azfounmondilla"]
 
 
-email=comp[2]
+email=comp[21]
 paxx="g0ping0*"
 # paxx="g0ping0**"
 # paxx="agoon007"
@@ -37,3 +37,31 @@ paxx="g0ping0*"
 # justin0hell0w
 # kawadurki    
 # olamadobano
+# 1 andromialwatid
+# 2 0ct0pusx01xandrow
+# 3 andersonandr0w00
+# 4 0ct0pusx01xandrow
+# 5 bigoctbig
+# 6 uppermainxforyou
+# 7 bigochildxone
+# 8 bigochildxtow
+# 9 bigochildxthree
+# 10 bigochildxfour
+# 11 cikochildxone
+# 12 danayxmaindanay
+# 13 antix03xthree
+# 14 adrowchildxfour
+# 15 danayxchildx01danay
+# 16 danayxchildx03danay
+# 17 danayxchildx02danay
+# 18 danayxchildx04danay
+# 19 cikox0xmain
+# 20 vanishmainxxone
+# 21 vanishxmainxtow
+# 22 vanishxmainxthree
+# 23 vanishxmainfour
+# 24 cikox0xmain
+# 25 cikochildxone
+# 26 cikochildxtow
+# 27 cikochildxthree
+# 28 cikochildxfour
