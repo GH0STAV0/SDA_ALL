@@ -149,7 +149,7 @@ def change_gc_acc():
 		change_gc_acc()
 
 
-change_gc_acc()
+#change_gc_acc()
 # input("prompt")
 
 def extact_gc_profile():
