@@ -54,7 +54,7 @@ print(read_current_acc_goo())
 # g00g_acc="garmiyashour"
 # g00g_acc="garmiyashour"
 g00g_id,g00g_acc= api_mysql.get_active_goo()
-# g00g_acc= "garmiyashour"
+# g00g_acc= "cikox0xmain"
 #
 # erogomayke
 # g00g_acc="vanishxmainfour"
@@ -88,8 +88,11 @@ def check_if_update(new_set_van_gc_main_account):
 ###############################################################################################################################
 def update_and_reset_go_ac(new_set_van_gc_main_account):
 	# print("reset_all_google_van_main_account")
-	print("reset_all_google_van_main_account : ",new_set_van_gc_main_account)
 	# api_mysql.reset_all_google_van_main_account(new_set_van_gc_main_account)
+	# raise SystemExit
+	# sys.exit("Height less than 165")
+	
+	print("reset_all_google_van_main_account : ",new_set_van_gc_main_account)
 	api_mysql.reset_all_google_big_main_account(new_set_van_gc_main_account)
 	time.sleep(3)
 	print("update_google_van_main_account: ",new_set_van_gc_main_account)
@@ -98,8 +101,6 @@ def update_and_reset_go_ac(new_set_van_gc_main_account):
 	time.sleep(2)
 	print("EXIT")
 	api_mysql.update_backup_acount(new_set_van_gc_main_account)
-	# raise SystemExit
-	# sys.exit("Height less than 165")
 
 ########################################################################################################################################
 def change_gc_acc():

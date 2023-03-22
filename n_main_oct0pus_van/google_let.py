@@ -231,7 +231,6 @@ def deconected_prof3(driver):
 ######################USER AGENT ###################################################
 ######################USER AGENT ###################################################
 def check_profile_validity(driver):
-
 	print("check_profile_validity",end='',flush=True)
 	# cnf_bvb.alias_send_msg("check_profile_validity ")
 	get_url_1 = driver.current_url

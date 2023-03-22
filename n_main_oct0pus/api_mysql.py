@@ -46,14 +46,18 @@ def get_config_with_api_van(i_d):
 #////////////////////////////////////////////////////////////////
 #//////// * VANISH * - count_left_api ////////////////////////////////////////////////////////
 def van_count_left_api():
-	response = requests.get(f'{api_url}/van/count')
-	data = response.json() #.get('COUNT(*)')
-	d2=str(data[0]).split(":")
-	d2=d2[1].replace('}',"")
-	d3=d2.replace(' ',"")
-	count_left_count = d3
-	# print(count_left_count)
-	return count_left_count
+	try:
+		response = requests.get(f'{api_url}/van/count', timeout=5)
+		data = response.json() #.get('COUNT(*)')
+		d2=str(data[0]).split(":")
+		d2=d2[1].replace('}',"")
+		d3=d2.replace(' ',"")
+		count_left_count = d3
+		# print(count_left_count)
+		return count_left_count
+	except:
+		van_count_left_api()
+
 #////////////////////////////////////////////////////////////////
 # van_count_left_api()
 
@@ -101,7 +105,7 @@ def reset_van_api():
 def check_online():
 	try:
 		print("tgtg")
-		response = requests.get(f'{api_url}/all')
+		response = requests.get(f'{api_url}/all' , timeout=5)
 		data = response.json()
 		# print(data)
 	except:
@@ -109,11 +113,12 @@ def check_online():
 		check_online()
 
 def get_active_goo():
+	 # , timeout=5
 	data_id = "null" 
 	data_name_acc="null"
 	check_online()
 	try:
-		response = requests.get(f'{api_url}/nor/account/active')
+		response = requests.get(f'{api_url}/nor/account/active' , timeout=5)
 		data = response.json()
 		data_id = data[0].get('acc_numbre')
 		data_name_acc = data[0].get('account_id')
@@ -227,12 +232,19 @@ def reset_all_google_van_main_account(van_gc_main_account):
 	# van_count_left_api()
 # update_conf_van_api(185)
 #/////////////////  update_conf_nord_api ///////////////////////////////////////////////
-def reset_all_google_big_main_account(van_gc_main_account):
+def reset_all_google_big_main_account(big_gc_main_account):
+	print("\n RESET : "+big_gc_main_account)
+	try:
+		d_data = {'id':'1'}
+		response = requests.put(f"{api_url}/nor/account/update/%s" % big_gc_main_account, timeout=5)
+		#print(response.content)
+		print(response.text)
+	except:
+		reset_all_google_big_main_account(big_gc_main_account)
+# reset_all_google_big_main_account("cikox0xmain")
+	# get_config_with_api_van(id_config)
 	# van_count_left_api()
 	# print(id_config)
-	# get_config_with_api_van(id_config)
-	d_data = {'id':'1'}
-	response = requests.put(f"{api_url}/nor/account/update/%s" % van_gc_main_account)
 	# print(response.content)
 	# get_config_with_api_van(id_config)
 	# van_count_left_api()
@@ -240,16 +252,29 @@ def reset_all_google_big_main_account(van_gc_main_account):
 
 #/////////////////////   ///////////////////////////////////////////
 def update_google_van_main_account(nord_gc_main_account):
-	# van_count_left_api()
-	# print(id_config)
-	# get_config_with_api_van(id_config)
-	d_data = {'id':'1'}
-	response = requests.put(f"{api_url}/nor/account/act/%s" %nord_gc_main_account)
-	print(response.content)
+	print("nord_gc_main_account")
+	try:
+		# van_count_left_api()
+		# print(id_config)
+		# get_config_with_api_van(id_config)
+		d_data = {'id':'1'}
+		response = requests.put(f"{api_url}/nor/account/act/%s" %nord_gc_main_account , timeout=5)
+		print(response.content)
+	except:
+		update_google_van_main_account(nord_gc_main_account)
+	g_index,g_a=get_active_goo()
+	print("ok : "+g_a)
+	if g_a == nord_gc_main_account :
+		print("yes it the same")
+	else:
+		 update_google_van_main_account(nord_gc_main_account)
+
+
+
 	# get_config_with_api_van(id_config)
 	# van_count_left_api()
 # update_conf_van_api(185)
-
+update_google_van_main_account("danayxmaindanay")
 #/////////////////////   ///////////////////////////////////////////
 # reset_all_google_van_main_account("id_config")
 # update_google_van_main_account("vanishmainxxone")
