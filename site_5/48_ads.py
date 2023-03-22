@@ -280,7 +280,7 @@ def starting_tasks():
 	width ,height=cnf_bvb.resolution_func()
 	try:
 		stage_1()### CLEAR
-		cnf_bvb.p0st_phase()
+		# cnf_bvb.p0st_phase()
 		visible_v=cnf_bvb.visible_v
 		# telrgram_text_log.extend((visible_v))
 		extt.fuckk.extend((str(visible_v)))
