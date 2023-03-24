@@ -274,7 +274,7 @@ def update_google_van_main_account(nord_gc_main_account):
 	# get_config_with_api_van(id_config)
 	# van_count_left_api()
 # update_conf_van_api(185)
-update_google_van_main_account("danayxmaindanay")
+# update_google_van_main_account("danayxmaindanay")
 #/////////////////////   ///////////////////////////////////////////
 # reset_all_google_van_main_account("id_config")
 # update_google_van_main_account("vanishmainxxone")
