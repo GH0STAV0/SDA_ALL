@@ -17,7 +17,7 @@ for (num,item) in enumerate(comp):
 # comp=["vovanvonvowe","azfounmondilla"]
 
 
-email=comp[21]
+email=comp[4]
 paxx="g0ping0*"
 # paxx="g0ping0**"
 # paxx="agoon007"
