@@ -1,0 +1,5 @@
+1679879589420	geckodriver	INFO	Listening on 127.0.0.1:18015
+1679879589924	mozrunner::runner	INFO	Running command: "/root/EXTRAT/firefox-58.0.1/firefox/firefox" "--marionette" "--width=1366" "--height=768" "--remote-debugging-port" "38175" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileQjKxas"
+1679879598170	Marionette	INFO	Enabled via --marionette
+1679879606624	Marionette	INFO	Listening on port 14533
+1679879606698	Marionette	WARN	TLS certificate errors will be ignored for this session
