@@ -120,3 +120,5 @@ def build_driver(width,height):
 	except Exception as error:
 		print("    Error !!!!! ----->"+str(error))
 	return driver
+
+# driver=build_driver(740,680)

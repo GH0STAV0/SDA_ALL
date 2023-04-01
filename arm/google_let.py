@@ -40,7 +40,6 @@ telrgram_text=[]
 
 email=cnf_bvb.g00g_acc
 
-
 paxx="g0ping0*"
 
 
@@ -313,14 +312,16 @@ def insert_pass(driver):
 ######################USER AGENT ###################################################
 		
 def starting_tasks():
-	width ,height=cnf_bvb.resolution_func()
 	cnf_bvb.alias_send_msg("starting_tasks")
 
 	try:
+		width ,height=cnf_bvb.resolution_func()
 		stage_1()### CLEAR
 		# mod_vpn2.fnc_vpn ()
 		visible_v=cnf_bvb.visible_v
+		# print(str(height))
 		display = Display(visible=visible_v, size=(width,height)).start()
+		# input('xxx')
 		driver=mod_driver2.build_driver(width ,height)
 		lets_play(driver)
 		display.stop()
@@ -328,7 +329,7 @@ def starting_tasks():
 
 	except Exception as error:
 		cnf_bvb.send_msg_dock(str(error))
-		print (str(error))
+		print (str(error) +"eeee")
 
 
 
@@ -342,9 +343,9 @@ def main():
 	cnf_bvb.send_msg_dock("main")
 	cnf_bvb.extract_pof()
 	try:
-		
 		starting_tasks()
 	except Exception as error:
+		print(str(error)+"00000000000000000")
 		cnf_bvb.send_msg_dock(str(error))
 	kiliing_scr()
 

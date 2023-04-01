@@ -24,7 +24,9 @@ def read_current_acc_goo():
 	return lines
 
 print(read_current_acc_goo())
-# g00g_acc="vovanvonvowe"
+# g00g_acc="xxtawelchildxtow"
+# email="xxtawelchildxtow"
+# 
 g00g_acc=read_current_acc_goo()
 pofile_path=pwd+"/tmp/"+g00g_acc
 
