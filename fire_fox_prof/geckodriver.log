@@ -1,0 +1,23 @@
+1682024759997	geckodriver	INFO	Listening on 127.0.0.1:41191
+1682024760532	mozrunner::runner	INFO	Running command: "/root/EXTRAT/firefox-57.0.1/firefox/firefox" "--marionette" "--width=1366" "--height=768" "--remote-debugging-port" "59079" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileTSfFm6"
+1682024765765	Marionette	INFO	Enabled via --marionette
+1682024773996	Marionette	INFO	Listening on port 30583
+1682024774282	Marionette	WARN	TLS certificate errors will be ignored for this session
+1682024774438	Marionette	DEBUG	Register listener.js for window 2147483649
+1682024779102	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1682024780493	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1682024780494	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1682024782666	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://accounts.google.com/v3/signin/identifier?dsh=S-452324660%3A1682024897035022&continue=https%3A%2F%2Fshell.cloud.google.com%2F%3Fcloudshell%3Dtrue%26show%3Dterminal&followup=https%3A%2F%2Fshell.cloud.google.com%2F%3Fcloudshell%3Dtrue%26show%3Dterminal&ifkv=AQMjQ7THsdW1coKvq7mu7d9egWJK2n1zn8SqzB9yWHRgvze-MrzP96ksPqHv2L28XARwEG6vRdgm&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+1682024783261	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483657"
+1682024783314	Marionette	DEBUG	Received DOM event "pageshow" for "https://accounts.google.com/v3/signin/identifier?dsh=S-452324660%3A1682024897035022&continue=https%3A%2F%2Fshell.cloud.google.com%2F%3Fcloudshell%3Dtrue%26show%3Dterminal&followup=https%3A%2F%2Fshell.cloud.google.com%2F%3Fcloudshell%3Dtrue%26show%3Dterminal&ifkv=AQMjQ7THsdW1coKvq7mu7d9egWJK2n1zn8SqzB9yWHRgvze-MrzP96ksPqHv2L28XARwEG6vRdgm&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+1682024800742	Marionette	DEBUG	Received DOM event "beforeunload" for "https://shell.cloud.google.com/?cloudshell=true&show=terminal"
+1682024800880	Marionette	DEBUG	Received DOM event "pagehide" for "https://shell.cloud.google.com/?cloudshell=true&show=terminal"
+1682024800897	Marionette	DEBUG	Received DOM event "unload" for "https://shell.cloud.google.com/?cloudshell=true&show=terminal"
+1682024802428	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://shell.cloud.google.com/?cloudshell=true&show=terminal"
+1682024802429	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483671"
+1682024802431	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483664"
+1682024802439	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483665"
+1682024802440	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483669"
+1682024802440	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483674"
+1682024802664	Marionette	DEBUG	Received DOM event "pageshow" for "https://shell.cloud.google.com/?cloudshell=true&show=terminal"
+[Child 5506, Chrome_ChildThread] WARNING: pipe error (18): Connection reset by peer: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
